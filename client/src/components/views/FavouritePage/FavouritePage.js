@@ -3,6 +3,7 @@ import "./favouritePage.css";
 import axios from "axios";
 import { Popover } from "antd";
 import { IMAGE_URL } from "../../Config";
+import Table from "react-bootstrap/Table";
 
 function FavouritePage(props) {
   const [FavouriteMovies, setFavouriteMovies] = useState([]);
@@ -71,14 +72,14 @@ function FavouritePage(props) {
     <div style={{ width: "85%", margin: "3rem auto" }}>
       <h3>My Favourite Movies</h3>
       <hr />
-      <table>
+      <Table striped bordered hover>
         <tr>
           <th>Movie Title</th>
           <th>Movie RunTime</th>
           <th>Remove From Favourites</th>
         </tr>
         <tbody>{renderTableBody}</tbody>
-      </table>
+      </Table>
     </div>
   );
 }

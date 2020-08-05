@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../Footer/Footer";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
-import { Typography, Row, Button } from "antd";
+import { Typography, Row } from "antd";
 import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
 const { Title } = Typography;
 
 function LandingPage() {
@@ -44,7 +45,7 @@ function LandingPage() {
       {/* {Body} */}
 
       <div style={{ width: "85%", margin: "1rem auto" }}>
-        <Title level={2}>Movies By Latest</Title>
+        <h2 class="font-weight-bold">Movies By Latest</h2>
         <hr />
 
         {/* {Movie Grid Cards} */}
@@ -68,7 +69,9 @@ function LandingPage() {
         {/* Load More Button */}
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button onClick={handleClick}>Load More</Button>
+          <Button variant="secondary" onClick={handleClick}>
+            Load More
+          </Button>
         </div>
       </div>
     </div>
