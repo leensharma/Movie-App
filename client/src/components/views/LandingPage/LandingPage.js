@@ -10,8 +10,8 @@ function LandingPage() {
   const [Movies, setMovies] = useState([]);
   const [nowPlaying, setNowPlaying] = useState([]);
   const [currentPage, setCurrentPage] = useState([]);
-  // const [genres, setGenres] = useState([]);
-  //const [movieByGenre, setMovieByGenre] = useState([]);
+  const [genres, setGenres] = useState([]);
+  const [genreId, setGenreId] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -26,21 +26,12 @@ function LandingPage() {
     const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     fetchMovies(endPoint);
 
-    /*  const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&page=1&with_genres=28`;
-
-    fetchMovieByGenre(endpoint);
-
     fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}&language=en-US&page=1`)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
-        const modifiedData = response.genres.map((g) => ({
-          id: g["id"],
-          name: g["name"],
-        }));
-        console.log(modifiedData);
-        setGenres(modifiedData);
-      });  */
+        setGenres(response.genres);
+      });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -49,54 +40,46 @@ function LandingPage() {
     fetch(path)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
+        //console.log(response);
         // console.log("Movies", ...Movies);
         // console.log("response", ...response.results);
         setMovies([...Movies, ...response.results]);
         setCurrentPage(response.page);
       });
   };
-  /*   const fetchMovieByGenre = (endpoint) => {
+  const fetchMovieByGenre = (endpoint) => {
     fetch(endpoint)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
-        console.log(...response.results);
+        // console.log(response);
         setCurrentPage(response.page);
-
-        const modifiedData = response["results"].map((m) => ({
-          id: m["id"],
-          poster_path: m["poster_path"],
-          title: m["title"],
-        }));
-        console.log(modifiedData);
-        setMovieByGenre(modifiedData);
-        console.log(movieByGenre);
+        setMovies(response.results);
+        console.log(Movies);
       });
   };
- */
-  const handleClick = () => {
-    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${
-      currentPage + 1
-    }`;
-    fetchMovies(endpoint);
-  };
 
-  /*   const handleGenreClick = (genre_id) => {
+  const handleClick = () => {
     const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&page=${
       currentPage + 1
-    }&with_genres=28`;
+    }&with_genres=${genreId}`;
+    fetchMovies(endpoint);
+    console.log(Movies);
+  };
+
+  const handleGenreClick = (genre_id) => {
+    const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&page=1&with_genres=${genre_id}`;
 
     fetchMovieByGenre(endpoint);
-  }; */
+  };
 
-  /*  const genreList = genres.map((item, index) => {
+  const genreList = genres.map((item, index) => {
     return (
       <li className="list-inline-item" key={index}>
         <button
           type="button"
           className="btn btn-outline-info"
           onClick={() => {
+            setGenreId(item.id);
             handleGenreClick(item.id);
           }}
         >
@@ -104,7 +87,7 @@ function LandingPage() {
         </button>
       </li>
     );
-  }); */
+  });
 
   return (
     <div style={{ width: "100%", margin: "0 " }}>
@@ -134,11 +117,11 @@ function LandingPage() {
       </div>
 
       {/* {Body} */}
-      {/*  <div style={{ width: "85%", margin: "1rem auto" }} className="row mt-3">
+      <div style={{ width: "85%", margin: "1rem auto" }} className="row mt-3">
         <div className="col">
           <ul className="list-inline">{genreList}</ul>
         </div>
-      </div> */}
+      </div>
       <hr style={{ borderTop: "1px solid #5a606b" }}></hr>
 
       <div style={{ width: "85%", margin: "1rem auto" }}>

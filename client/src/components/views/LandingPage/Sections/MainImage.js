@@ -1,9 +1,8 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function MainImage(props) {
   return (
-    <div>
+    <div style={{ height: 600, width: "100%" }}>
       <div
         style={{
           background: `linear-gradient(to bottom, rgba(0,0,0,0)
@@ -16,7 +15,7 @@ function MainImage(props) {
       >
         <a href={`/movie/${props.movieId}`}>
           <img
-            style={{ height: 500, width: "100%" }}
+            style={{ height: 600, width: "100%" }}
             src={props.image}
             alt={props.title}
           />

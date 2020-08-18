@@ -9,7 +9,6 @@ import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer";
 import MovieDetailsPage from "./views/MovieDetailsPage/MovieDetailsPage";
 import FavouritePage from "./views/FavouritePage/FavouritePage";
-console.log(process.env.REACT_APP_API_KEY);
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
