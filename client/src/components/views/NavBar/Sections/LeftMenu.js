@@ -1,18 +1,14 @@
 import React from "react";
-import { Menu } from "antd";
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+import Nav from "react-bootstrap/Nav";
 
 function LeftMenu(props) {
   return (
-    <Menu mode={props.mode}>
-      <Menu.Item key="mail">
-        <a href="/">Home</a>
-      </Menu.Item>
-      <Menu.Item key="favourite">
-        <a href="/favourite">Favourite</a>
-      </Menu.Item>
-    </Menu>
+    <div>
+      <Nav>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/favourite">Favourite</Nav.Link>
+      </Nav>
+    </div>
   );
 }
 

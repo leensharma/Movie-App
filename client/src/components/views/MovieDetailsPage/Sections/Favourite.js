@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 function Favourite(props) {
+  const user = useSelector((state) => state.user);
   const [FavouriteNumber, setFavouriteNumber] = useState(0);
   const [Favourited, setFavourited] = useState(false);
 
@@ -25,11 +27,16 @@ function Favourite(props) {
       if (response.data.success) {
         setFavourited(response.data.favourited);
       } else {
-        alert("Failed to get Favourity Info");
+        alert("Failed to get Favourite Info");
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const favouriteHandle = () => {
+    if (user.userData && !user.userData.isAuth) {
+      return alert("Please Log in first");
+    }
+
     if (Favourited) {
       //already added to favourite list
       axios
@@ -56,7 +63,11 @@ function Favourite(props) {
   };
   return (
     <div>
-      <button onClick={favouriteHandle}>
+      <button
+        type="button"
+        className="btn btn-outline-info"
+        onClick={favouriteHandle}
+      >
         {Favourited ? "Remove from Favourite  " : "Add to Favourite  "}
         {FavouriteNumber}
       </button>

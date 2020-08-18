@@ -12,7 +12,7 @@ function FavouritePage(props) {
   };
   useEffect(() => {
     fetchFavouriteMovie();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchFavouriteMovie = () => {
     axios
@@ -54,11 +54,10 @@ function FavouritePage(props) {
     );
 
     return (
-      <tr>
+      <tr key={index}>
         <Popover content={content} title={`${movie.movieTitle}`}>
           <td>{movie.movieTitle}</td>
         </Popover>
-
         <td>{movie.movieRuntime} mins</td>
         <td>
           <button onClick={() => onClickRemove(movie.movieId)}>
@@ -73,11 +72,14 @@ function FavouritePage(props) {
       <h3>My Favourite Movies</h3>
       <hr />
       <Table striped bordered hover>
-        <tr>
-          <th>Movie Title</th>
-          <th>Movie RunTime</th>
-          <th>Remove From Favourites</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Movie Title</th>
+            <th>Movie RunTime</th>
+            <th>Remove From Favourites</th>
+          </tr>
+        </thead>
+
         <tbody>{renderTableBody}</tbody>
       </Table>
     </div>

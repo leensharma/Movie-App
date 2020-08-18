@@ -9,6 +9,7 @@ import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer";
 import MovieDetailsPage from "./views/MovieDetailsPage/MovieDetailsPage";
 import FavouritePage from "./views/FavouritePage/FavouritePage";
+console.log(process.env.REACT_APP_API_KEY);
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -18,7 +19,7 @@ function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <NavBar />
-      <div style={{ paddingTop: "69px", minHeight: "calc(100vh - 80px)" }}>
+      <div style={{ paddingTop: "55px", minHeight: "calc(100vh - 80px)" }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
@@ -27,12 +28,12 @@ function App() {
           <Route
             exact
             path="/movie/:movieId"
-            component={Auth(MovieDetailsPage, null)}
+            component={Auth(MovieDetailsPage, true)}
           />
           <Route
             exact
             path="/favourite"
-            component={Auth(FavouritePage, null)}
+            component={Auth(FavouritePage, false)}
           />
         </Switch>
       </div>
