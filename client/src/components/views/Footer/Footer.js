@@ -6,7 +6,7 @@ function Footer() {
 
       <div className="row m-3">
         <div className="col-md-8 col-sm-6" style={{ color: "#5a606b" }}>
-          <h3>ABOUT ME</h3>
+          <h3 style={{ color: "white" }}>ABOUT ME</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
             error earum perspiciatis praesentium sint ipsum provident blanditiis
@@ -45,7 +45,7 @@ function Footer() {
           </center>
         </div>
         <div className="col-md-4 col-sm-6" style={{ color: "#5a606b" }}>
-          <h3>KEEP IN TOUCH</h3>
+          <h3 style={{ color: "white" }}>KEEP IN TOUCH</h3>
           <ul className="list-unstyled">
             <li>
               <p>

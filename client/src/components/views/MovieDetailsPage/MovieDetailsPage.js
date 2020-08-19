@@ -92,49 +92,55 @@ function MovieDetailsPage(props) {
 
   const castList = Cast.slice(0, 4).map((c, i) => {
     return (
-      <div className="col-md-3 text-center" key={i}>
+      <React.Fragment key={i}>
         {c.profile_path && (
-          <div>
-            <img
-              className="img-fluid rounded-circle mx-auto d-block"
-              src={`${IMAGE_URL}w200/${c.profile_path}`}
-              alt={c.name}
-            ></img>
-            <p className="font-weight-bold text-center">{c.name}</p>
-            <p
-              className="font-weight-light text-center"
-              style={{ color: "#5a606b" }}
-            >
-              {c.character}
-            </p>
+          <div className="col-md-3 text-center">
+            <div>
+              <img
+                className="img-fluid rounded-circle mx-auto d-block"
+                src={`${IMAGE_URL}w200/${c.profile_path}`}
+                alt={c.name}
+              ></img>
+              <p className="font-weight-bold text-center">{c.name}</p>
+              <p
+                className="font-weight-light text-center"
+                style={{ color: "#5a606b" }}
+              >
+                {c.character}
+              </p>
+            </div>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   });
 
   const similarMovieList = SimilarMovies.slice(0, 4).map((item, index) => {
     return (
-      <div className="col-md-3 col-sm-6" key={index}>
-        <div className="card">
-          <a href={`/movie/${item.id}`}>
-            <img
-              className="img-fluid"
-              src={`${IMAGE_URL}original/${item.poster_path}`}
-              alt={item.title}
-            ></img>
-          </a>
-        </div>
-        <div className="mt-3">
-          <p style={{ fontWeight: "bolder" }}>{item.title}</p>
-          <p>Rated: {item.vote_average}</p>
-          <ReactStars
-            count={item.vote_average}
-            size={20}
-            color={"#f4c10f"}
-          ></ReactStars>
-        </div>
-      </div>
+      <React.Fragment key={index}>
+        {item.backdrop_path && (
+          <div className="col-md-3 col-sm-6">
+            <div className="card">
+              <a href={`/movie/${item.id}`}>
+                <img
+                  className="img-fluid"
+                  src={`${IMAGE_URL}original/${item.poster_path}`}
+                  alt={item.title}
+                ></img>
+              </a>
+            </div>
+            <div className="mt-3">
+              <p style={{ fontWeight: "bolder" }}>{item.title}</p>
+              <p>Rated: {item.vote_average}</p>
+              <ReactStars
+                count={item.vote_average}
+                size={20}
+                color={"#f4c10f"}
+              ></ReactStars>
+            </div>
+          </div>
+        )}
+      </React.Fragment>
     );
   });
 

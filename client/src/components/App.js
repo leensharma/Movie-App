@@ -21,19 +21,24 @@ function App() {
       <div style={{ paddingTop: "55px", minHeight: "calc(100vh - 80px)" }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
-          <Route exact path="/login" component={Auth(LoginPage, false)} />
-          <Route exact path="/register" component={Auth(RegisterPage, false)} />
-
           <Route
             exact
             path="/movie/:movieId"
-            component={Auth(MovieDetailsPage, true)}
+            component={Auth(MovieDetailsPage, null)}
           />
-          <Route
-            exact
-            path="/favourite"
-            component={Auth(FavouritePage, false)}
-          />
+          <div style={{ backgroundColor: "#ffffff" }}>
+            <Route exact path="/login" component={Auth(LoginPage, false)} />
+            <Route
+              exact
+              path="/register"
+              component={Auth(RegisterPage, false)}
+            />
+            <Route
+              exact
+              path="/favourite"
+              component={Auth(FavouritePage, null)}
+            />
+          </div>
         </Switch>
       </div>
       <Footer />

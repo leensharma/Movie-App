@@ -60,7 +60,10 @@ function FavouritePage(props) {
         </Popover>
         <td>{movie.movieRuntime} mins</td>
         <td>
-          <button onClick={() => onClickRemove(movie.movieId)}>
+          <button
+            className="btn btn-outline-info"
+            onClick={() => onClickRemove(movie.movieId)}
+          >
             Remove From the Favourites
           </button>
         </td>
