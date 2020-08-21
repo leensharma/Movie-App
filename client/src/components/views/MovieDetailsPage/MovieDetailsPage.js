@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
@@ -8,7 +9,7 @@ import ReactStars from "react-rating-stars-component";
 
 function MovieDetailsPage(props) {
   let genres = [];
-  const movieId = props.match.params.movieId;
+  const { movieId } = useParams();
   const [Movie, setMovie] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState([]);

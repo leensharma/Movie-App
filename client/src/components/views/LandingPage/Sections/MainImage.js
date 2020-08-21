@@ -30,8 +30,8 @@ function MainImage(props) {
           marginLeft: "8rem",
         }}
       >
-        <h3 style={{ color: "white" }}>{props.title}</h3>
-        <p style={{ color: "white", fontSize: "1rem" }}>{props.text}</p>
+        <h3 style={{ color: "#ffffff" }}>{props.title}</h3>
+        <p style={{ color: "#ffffff", fontSize: "1rem" }}>{props.text}</p>
       </div>
     </div>
   );

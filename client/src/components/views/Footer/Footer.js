@@ -6,7 +6,7 @@ function Footer() {
 
       <div className="row m-3">
         <div className="col-md-8 col-sm-6" style={{ color: "#5a606b" }}>
-          <h3 style={{ color: "white" }}>ABOUT ME</h3>
+          <h3 style={{ color: "#9ca9b3" }}>ABOUT ME</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
             error earum perspiciatis praesentium sint ipsum provident blanditiis
@@ -19,33 +19,9 @@ function Footer() {
             dolore nihil? Nulla sit, recusandae ea tenetur rerum deserunt sequi
             earum?
           </p>
-          <center>
-            <ul className="list-inline">
-              <li className="list-inline-item">
-                <a href="/" style={{ color: "#f4c10f" }}>
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="/" style={{ color: "#f4c10f" }}>
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="/" style={{ color: "#f4c10f" }}>
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="/" style={{ color: "#f4c10f" }}>
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </center>
         </div>
         <div className="col-md-4 col-sm-6" style={{ color: "#5a606b" }}>
-          <h3 style={{ color: "white" }}>KEEP IN TOUCH</h3>
+          <h3 style={{ color: "#9ca9b3" }}>KEEP IN TOUCH</h3>
           <ul className="list-unstyled">
             <li>
               <p>
@@ -72,7 +48,35 @@ function Footer() {
               </p>
             </li>
           </ul>
+
+          <ul className="list-inline">
+            <li className="list-inline-item">
+              <a href="/" style={{ color: "#f4c10f" }}>
+                <i className="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="/" style={{ color: "#f4c10f" }}>
+                <i className="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="/" style={{ color: "#f4c10f" }}>
+                <i className="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="/" style={{ color: "#f4c10f" }}>
+                <i className="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div style={{ color: "#9ca9b3" }}>
+        <center>
+          <p>Made by Leen Sharma</p>
+        </center>
       </div>
     </div>
   );

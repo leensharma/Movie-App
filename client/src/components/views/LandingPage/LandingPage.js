@@ -4,7 +4,6 @@ import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import { Row, Container } from "react-bootstrap";
 
 function LandingPage() {
   const [Movies, setMovies] = useState([]);
@@ -90,7 +89,7 @@ function LandingPage() {
   });
 
   return (
-    <div style={{ width: "100%", margin: "0 " }}>
+    <div>
       <div>
         <RBCarousel
           autoplay={true}
@@ -117,7 +116,7 @@ function LandingPage() {
       </div>
 
       {/* {Body} */}
-      <div style={{ width: "85%", margin: "1rem auto" }} className="row mt-3">
+      <div style={{ width: "85%", margin: "1rem auto" }}>
         <div className="col">
           <ul className="list-inline">{genreList}</ul>
         </div>
@@ -125,12 +124,12 @@ function LandingPage() {
       <hr style={{ borderTop: "1px solid #5a606b" }}></hr>
 
       <div style={{ width: "85%", margin: "1rem auto" }}>
-        {/* <h2 className="font-weight-bold">Movies By Latest</h2>
-        <hr />
- */}
+        {/* <h2 className="font-weight-bold">Movies By Latest</h2>*/}
+
         {/* {Movie Grid Cards} */}
-        <Container fluid>
-          <Row className="row-mt-3 ">
+
+        <div>
+          <div className="row mt-3 ">
             {/* React Fragment helps in returning multiple elements. The other alternative is to use a html element like div to wrap them. 
         But using extra html node can cause some semantic issues. */}
 
@@ -141,12 +140,13 @@ function LandingPage() {
                     <GridCard
                       image={`${IMAGE_URL}w500${movie.poster_path}`}
                       movieId={movie.id}
+                      title={movie.title}
                     />
                   )}
                 </React.Fragment>
               ))}
-          </Row>
-        </Container>
+          </div>
+        </div>
 
         {/* Load More Button */}
         <br />
