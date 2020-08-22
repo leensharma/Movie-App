@@ -2,7 +2,7 @@ import React from "react";
 
 function MainImage(props) {
   return (
-    <div style={{ height: 600, width: "100%" }}>
+    <div>
       <div
         style={{
           background: `linear-gradient(to bottom, rgba(0,0,0,0)
@@ -15,7 +15,8 @@ function MainImage(props) {
       >
         <a href={`/movie/${props.movieId}`}>
           <img
-            style={{ height: 600, width: "100%" }}
+            className="responsive"
+            style={{ height: "600px", width: "100%" }}
             src={props.image}
             alt={props.title}
           />

@@ -20,6 +20,10 @@ body {
   color: #24292e;
   background-color: #fff;
 }
+.responsive {
+  width: 100%;
+  height: auto;
+}
 
 .app {
   flex-direction: column;

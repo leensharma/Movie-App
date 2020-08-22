@@ -130,9 +130,10 @@ function MovieDetailsPage(props) {
                 ></img>
               </a>
             </div>
-            <div className="mt-3">
+            <div className="my-3">
               <p style={{ fontWeight: "bolder" }}>{item.title}</p>
               <p>Rated: {item.vote_average}</p>
+
               <ReactStars
                 count={item.vote_average}
                 size={20}
@@ -180,16 +181,6 @@ function MovieDetailsPage(props) {
       {/* {Body} */}
 
       <div style={{ width: "85%", margin: "1rem auto" }}>
-        <div className="row-mt-3">
-          <div className="col">
-            <p style={{ color: "#5a606b", fontWeight: "bolder" }}>GENRE</p>
-          </div>
-        </div>
-        <div className="row mt-3" style={{ margin: "1rem auto" }}>
-          <div className="col">
-            <ul className="list-inline">{genresList}</ul>
-          </div>
-        </div>
         <div
           className="mt-3"
           style={{ display: "flex", justifyContent: "flex-end" }}
@@ -202,6 +193,16 @@ function MovieDetailsPage(props) {
             movieId={movieId}
             movieInfo={Movie}
           />
+        </div>
+        <div className="row-mt-3">
+          <div className="col">
+            <p style={{ color: "#5a606b", fontWeight: "bolder" }}>GENRE</p>
+          </div>
+        </div>
+        <div className="row mt-3" style={{ margin: "1rem auto" }}>
+          <div className="col">
+            <ul className="list-inline">{genresList}</ul>
+          </div>
         </div>
 
         {/*Movie Rating */}
@@ -255,7 +256,15 @@ function MovieDetailsPage(props) {
 
         <div className="row mt-3">
           <div className="col">
-            <p style={{ color: "#5a606b", fontWeight: "bolder" }}>CASTS</p>
+            <p
+              style={{
+                color: "#5a606b",
+                fontWeight: "bolder",
+                marginLeft: "20px",
+              }}
+            >
+              CASTS
+            </p>
           </div>
         </div>
         <div className="row mt-3">{castList}</div>

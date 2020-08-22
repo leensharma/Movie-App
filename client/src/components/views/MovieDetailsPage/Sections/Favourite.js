@@ -19,7 +19,7 @@ function Favourite(props) {
       if (response.data.success) {
         setFavouriteNumber(response.data.favouriteNumber);
       } else {
-        alert("Failed to get Favourite Number");
+        //alert("Failed to get Favourite Number");
       }
     });
 
@@ -27,7 +27,7 @@ function Favourite(props) {
       if (response.data.success) {
         setFavourited(response.data.favourited);
       } else {
-        alert("Failed to get Favourite Info");
+        //alert("Failed to get Favourite Info");
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
