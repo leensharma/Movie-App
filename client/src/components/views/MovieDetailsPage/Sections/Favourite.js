@@ -65,7 +65,7 @@ function Favourite(props) {
     <div>
       <button
         type="button"
-        className="btn btn-outline-info"
+        className="btn btn-outline-info btn-outline-primary"
         onClick={favouriteHandle}
       >
         {Favourited ? "Remove from Favourite  " : "Add to Favourite  "}

@@ -4,6 +4,7 @@ import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+import { Button } from "react-bootstrap";
 
 function LandingPage() {
   const [Movies, setMovies] = useState([]);
@@ -76,7 +77,7 @@ function LandingPage() {
       <li className="list-inline-item" key={index}>
         <button
           type="button"
-          className="btn btn-outline-info"
+          className="btn btn-outline-info btn-outline-primary"
           onClick={() => {
             setGenreId(item.id);
             handleGenreClick(item.id);
@@ -153,7 +154,7 @@ function LandingPage() {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             type="button"
-            className="btn btn-outline-info"
+            className="btn btn-outline-info btn-outline-primary"
             onClick={handleClick}
           >
             Load More
