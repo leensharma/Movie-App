@@ -16,7 +16,7 @@ function MainImage(props) {
         <a href={`/movie/${props.movieId}`}>
           <img
             className="responsive"
-            style={{ height: "600px", width: "100%" }}
+            style={{ height: "100%", width: "100%" }}
             src={props.image}
             alt={props.title}
           />

@@ -42,6 +42,7 @@ input.error {
   height: 5px;
   margin-top: -12px;
 }
+
 .btn-outline-info {
   color: #5a606b;
   border: 1px solid #5a606b;
@@ -59,4 +60,9 @@ input.error {
 .fa-arrow-alt-circle-right:hover {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
+}
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
