@@ -149,33 +149,31 @@ function MovieDetailsPage(props) {
   return (
     <div>
       {/* Main Image */}
-      <div>
-        <MoviePalyerModal
-          show={isOpen}
-          onHide={() => {
-            setIsOpen(false);
-          }}
-        ></MoviePalyerModal>
 
-        {Movie && (
-          <MainImage
-            image={
-              Movie.backdrop_path && `${IMAGE_URL}w1280${Movie.backdrop_path}`
-            }
-            title={`${Movie.original_title}`}
-            text={`${Movie.overview}`}
-            movieId={`${Movie.id}`}
-          />
-        )}
-        <div>
-          <div className="carousel-center">
-            <i
-              onClick={() => setIsOpen(true)}
-              className="far fa-play-circle"
-              style={{ fontSize: 95, color: "#f4c10f", cursor: "pointer" }}
-            ></i>
-          </div>
-        </div>
+      <MoviePalyerModal
+        show={isOpen}
+        onHide={() => {
+          setIsOpen(false);
+        }}
+      ></MoviePalyerModal>
+
+      {Movie && (
+        <MainImage
+          image={
+            Movie.backdrop_path && `${IMAGE_URL}w1280${Movie.backdrop_path}`
+          }
+          title={`${Movie.original_title}`}
+          text={`${Movie.overview}`}
+          movieId={`${Movie.id}`}
+        />
+      )}
+
+      <div className="carousel-center">
+        <i
+          onClick={() => setIsOpen(true)}
+          className="far fa-play-circle"
+          style={{ fontSize: 95, color: "#f4c10f", cursor: "pointer" }}
+        ></i>
       </div>
 
       {/* {Body} */}

@@ -11,20 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  line-height: 1.5;
-  color: #24292e;
-  background-color: #fff;
-}
-.responsive {
-  width: 100%;
-  height: auto;
-}
-
 .app {
   flex-direction: column;
   display: flex;
@@ -60,9 +46,4 @@ input.error {
 .fa-arrow-alt-circle-right:hover {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
-}
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
