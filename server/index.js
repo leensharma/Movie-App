@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const config = require("./config/key");
@@ -16,8 +15,6 @@ const connect = mongoose
   })
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
-
-app.use(cors());
 
 //to not get any deprecation warning or error
 //support parsing of application/x-www-form-urlencoded post data

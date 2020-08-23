@@ -83,7 +83,10 @@ function MovieDetailsPage(props) {
     genresList = genres.map((g, i) => {
       return (
         <li className="list-inline-item" key={i}>
-          <button type="button" className="btn btn-outline-info">
+          <button
+            type="button"
+            className="btn btn-outline-info btn-outline-primary"
+          >
             {g.name}
           </button>
         </li>
@@ -148,32 +151,34 @@ function MovieDetailsPage(props) {
 
   return (
     <div>
-      {/* Main Image */}
+      <div>
+        {/* Main Image */}
 
-      <MoviePalyerModal
-        show={isOpen}
-        onHide={() => {
-          setIsOpen(false);
-        }}
-      ></MoviePalyerModal>
+        <MoviePalyerModal
+          show={isOpen}
+          onHide={() => {
+            setIsOpen(false);
+          }}
+        ></MoviePalyerModal>
 
-      {Movie && (
-        <MainImage
-          image={
-            Movie.backdrop_path && `${IMAGE_URL}w1280${Movie.backdrop_path}`
-          }
-          title={`${Movie.original_title}`}
-          text={`${Movie.overview}`}
-          movieId={`${Movie.id}`}
-        />
-      )}
+        {Movie && (
+          <MainImage
+            image={
+              Movie.backdrop_path && `${IMAGE_URL}w1280${Movie.backdrop_path}`
+            }
+            title={`${Movie.original_title}`}
+            text={`${Movie.overview}`}
+            movieId={`${Movie.id}`}
+          />
+        )}
 
-      <div className="carousel-center">
-        <i
-          onClick={() => setIsOpen(true)}
-          className="far fa-play-circle"
-          style={{ fontSize: 95, color: "#f4c10f", cursor: "pointer" }}
-        ></i>
+        <div className="carousel-center">
+          <i
+            onClick={() => setIsOpen(true)}
+            className="far fa-play-circle"
+            style={{ fontSize: 95, color: "#f4c10f", cursor: "pointer" }}
+          ></i>
+        </div>
       </div>
 
       {/* {Body} */}

@@ -4,7 +4,6 @@ import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import { Button } from "react-bootstrap";
 
 function LandingPage() {
   const [Movies, setMovies] = useState([]);
