@@ -8,4 +8,4 @@
 4. Type " npm install " inside the client directory ( Download Front-end Dependencies )
 5. To run this app execute `npm run dev` in terminal.
 
-[Visit Websute](https://fathomless-lowlands-89328.herokuapp.com)
+[Visit Website](https://fathomless-lowlands-89328.herokuapp.com)
