@@ -1,6 +1,6 @@
 # Movie-App
 ## Description
-A Full stack MERN website for movie theaters where user can search for movies and filter them by genres that are available and logged in user can add any movie to the Favorite List and can check how many users added particular movie to the Favorite List.
+A Full stack MERN website for movie trailers or teasers where user can browse movies and filter them by available geners. Logged in user can add any movie to the Favorite List and can check how many users added particular movie to the Favorite List.
 
 #### To use this application
 
@@ -42,6 +42,7 @@ Home Page has four Main components
 #### a. carousel
 - Showing new movies now playing in theaters.
 - On Click on any image of Carousel component you can go to MoveDetails page and check movie details.
+![alt text](https://github.com/leensharma/Movie-App/blob/master/Snapshots/Landing%20Page%201.JPG)
 
 #### b. Genre List
 - Showing Genre using button and list components
