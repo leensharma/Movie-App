@@ -13,31 +13,31 @@ A Full stack MERN website for movie theaters where user can search for movies an
 Visit Website:-[https://fathomless-lowlands-89328.herokuapp.com](https://fathomless-lowlands-89328.herokuapp.com)
 
 ## Features
-1. [Home/LandingPage](#Home/LandingPage)
-    - Carosel
-   - Genre List
-   - Grid Cards
-   - Load More
-2. MovieDetails
-   - Main Image
-    - Movie Detail
-   - Favorite Button
-    - Casts
-    - Similar Movies
-3. Favorite
-4. Login
-5. Register
-6. Navbar
-   - Left Menu
-   - Right Menu 
-7. Footer
+1. [Home/LandingPage](##1-homelandingpage)
+    - [Carosel](#a-carousel)
+   - [Genre List](#b-genre-list)
+   - [Grid Cards](#c-grid-cards)
+   - [Load More](#d-load-more)
+2. [MovieDetails](#2-moviedetails-page)
+   - [Main Image](#a-main-image)
+    -[Movie Detail](#b--movie-detail)
+   - [Favorite Button](#c--favorite-button)
+    - [Casts](#d-casts)
+    - [Similar Movies](#e-similar-movies)
+3. [Favorite](#3-favorite)
+4. [Login](#4login-page)
+5. [Register](#5register-page)
+6. [Navbar](#6-navbar)
+   - [Left Menu](#a-left-menu)
+   - [Right Menu](#b-right-menu)
+7. [Footer](#7footer)
 ---
 ### 1. Home/LandingPage
 Home Page has four Main components
-a. Carosel
-b. Genre List
-c. Grid Cards
-d. Load More
+- Carousel
+- Genre List
+- Grid Cards
+- Load More
 
 #### a. carousel
 - Showing new movies now playing in theaters.
@@ -73,7 +73,7 @@ Home Page has five Main components
 #### b.  Movie Detail
 -Shows Movie Genre,rating and other Details
 
-#### b.  Favorite Button
+#### c.  Favorite Button
 -Logged In User can add movie to favorite and check how many users added particular to favorite.If you are not logged in it will show message on click.
 
 #### d. Casts
