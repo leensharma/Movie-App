@@ -20,17 +20,17 @@ Visit Website:-[https://fathomless-lowlands-89328.herokuapp.com](https://fathoml
    - [Load More](#d-load-more)
 2. [MovieDetails](#2-moviedetails-page)
    - [Main Image](#a-main-image)
-    -[Movie Detail](#b--movie-detail)
-   - [Favorite Button](#c--favorite-button)
+    - [Movie Detail](#b-movie-detail)
+   - [Favorite Button](#c-favorite-button)
     - [Casts](#d-casts)
     - [Similar Movies](#e-similar-movies)
 3. [Favorite](#3-favorite)
-4. [Login](#4login-page)
-5. [Register](#5register-page)
+4. [Login](#4-login-page)
+5. [Register](#5-register-page)
 6. [Navbar](#6-navbar)
    - [Left Menu](#a-left-menu)
    - [Right Menu](#b-right-menu)
-7. [Footer](#7footer)
+7. [Footer](#7-footer)
 ---
 ### 1. Home/LandingPage
 Home Page has four Main components
@@ -70,10 +70,10 @@ Home Page has five Main components
 - Shows Poster of Movie
 - On Click Play Button you can watch Movie Trailer 
 
-#### b.  Movie Detail
+#### b. Movie Detail
 -Shows Movie Genre,rating and other Details
 
-#### c.  Favorite Button
+#### c. Favorite Button
 -Logged In User can add movie to favorite and check how many users added particular to favorite.If you are not logged in it will show message on click.
 
 #### d. Casts
@@ -88,10 +88,10 @@ Home Page has five Main components
 -  In Table by *hovering* on Movie Name you can see movie image in *popover*.
 - You can remove movies from favorite list by clicking Remove Button. 
 
-### 4.Login Page
+### 4. Login Page
 - If you are registered user you can log in
 
-### 5.Register Page
+### 5. Register Page
 - You can register if you want to login.
 
 ### 6. Navbar
@@ -107,5 +107,5 @@ It has two components-
 - If you are logged in it will show logout
 - If you are not logged in it will show SignIn and SignUp 
 
-### 7.Footer
+### 7. Footer
 - It shows About me and Contact Details.
