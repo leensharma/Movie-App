@@ -12,6 +12,11 @@ A Full stack MERN website for movie trailers or teasers where user can browse mo
 
 Visit Website:-[https://fathomless-lowlands-89328.herokuapp.com](https://fathomless-lowlands-89328.herokuapp.com)
 
+## Built with
+- FrontEnd: React.JS, Redux Library, Bootstrap, AntDesign, HTML/CSS
+- Backend: Node.JS, Express.JS
+- Database: MongoDB, Mongoose
+
 ## Features
 1. [Home/LandingPage](#1-homelandingpage)
     - [Carosel](#a-carousel)
