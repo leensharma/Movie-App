@@ -13,7 +13,7 @@ A Full stack MERN website for movie theaters where user can search for movies an
 Visit Website:-[https://fathomless-lowlands-89328.herokuapp.com](https://fathomless-lowlands-89328.herokuapp.com)
 
 ## Features
-1. [Home/LandingPage](##1-homelandingpage)
+1. [Home/LandingPage](#1-homelandingpage)
     - [Carosel](#a-carousel)
    - [Genre List](#b-genre-list)
    - [Grid Cards](#c-grid-cards)
