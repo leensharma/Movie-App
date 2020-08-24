@@ -84,12 +84,12 @@ Home Page has five Main components
 ![alt text](https://github.com/leensharma/Movie-App/blob/master/Snapshots/MainImage.JPG)
 
 #### b. Movie Detail
--Shows Movie Genre,rating and other Details
+- Shows Movie Genre,rating and other Details
 
 ![alt text](https://github.com/leensharma/Movie-App/blob/master/Snapshots/MovieDetails.JPG)
 
 #### c. Favorite Button
--Logged In User can add movie to favorite and check how many users added particular to favorite.If you are not logged in it will show message on click.
+- Logged In User can add movie to favorite and check how many users added particular to favorite.If you are not logged in it will show message on click.
 
 ![alt text](https://github.com/leensharma/Movie-App/blob/master/Snapshots/FavouriteButton.JPG)
 
