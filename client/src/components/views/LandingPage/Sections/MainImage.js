@@ -18,7 +18,7 @@ function MainImage(props) {
           style={{
             position: "absolute",
             maxWidth: "500px",
-            bottom: "2rem",
+            bottom: "8rem",
             marginLeft: "2rem",
           }}
         >
