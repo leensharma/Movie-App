@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div style={{ paddingTop: "55px" }}>
+      <div style={{ paddingTop: "60px" }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route
