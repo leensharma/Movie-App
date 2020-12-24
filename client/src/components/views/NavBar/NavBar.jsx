@@ -1,6 +1,6 @@
 import React from "react";
-import LeftMenu from "./Sections/LeftMenu";
-import RightMenu from "./Sections/RightMenu";
+import LeftMenu from "./Sections/LeftMenu.jsx";
+import RightMenu from "./Sections/RightMenu.jsx";
 import "./Sections/Navbar.css";
 import { Nav, Navbar } from "react-bootstrap";
 

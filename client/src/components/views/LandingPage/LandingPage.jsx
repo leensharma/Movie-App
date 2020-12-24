@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
-import MainImage from "./Sections/MainImage";
-import GridCard from "./Sections/GridCard";
+import MainImage from "./Sections/MainImage.jsx";
+import GridCard from "./Sections/GridCard.jsx";
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 

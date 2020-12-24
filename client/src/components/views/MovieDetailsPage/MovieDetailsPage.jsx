@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
-import MainImage from "../LandingPage/Sections/MainImage";
-import Favourite from "./Sections/Favourite";
+import MainImage from "../LandingPage/Sections/MainImage.jsx";
+import Favourite from "./Sections/Favourite.jsx";
 import ReactStars from "react-rating-stars-component";
 
 function MovieDetailsPage(props) {
@@ -18,22 +18,22 @@ function MovieDetailsPage(props) {
 
   useEffect(() => {
     fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`)
-      .then((response) => response.json())
-      .then((response) => {
+      .then(response => response.json())
+      .then(response => {
         console.log(response);
         setMovie(response);
       });
 
     fetch(`${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`)
-      .then((response) => response.json())
-      .then((response) => {
+      .then(response => response.json())
+      .then(response => {
         console.log(response);
         setCast(response.cast);
       });
 
     fetch(`${API_URL}movie/${movieId}/videos?api_key=${API_KEY}`)
-      .then((response) => response.json())
-      .then((response) => {
+      .then(response => response.json())
+      .then(response => {
         console.log(response);
         setVideo(response.results[0]);
       });
@@ -41,8 +41,8 @@ function MovieDetailsPage(props) {
     fetch(
       `${API_URL}movie/${movieId}/similar?api_key=${API_KEY}&language=en_US`
     )
-      .then((response) => response.json())
-      .then((response) => {
+      .then(response => response.json())
+      .then(response => {
         console.log(response);
         setSimilarMovies(response.results);
       });
@@ -50,7 +50,7 @@ function MovieDetailsPage(props) {
 
   genres = Movie.genres;
 
-  const MoviePalyerModal = (props) => {
+  const MoviePalyerModal = props => {
     const youtubeUrl = "https://www.youtube.com/watch?v=";
     return (
       <Modal
@@ -73,6 +73,7 @@ function MovieDetailsPage(props) {
             url={youtubeUrl + video.key}
             playing
             width="100%"
+            controls={true}
           ></ReactPlayer>
         </Modal.Body>
       </Modal>

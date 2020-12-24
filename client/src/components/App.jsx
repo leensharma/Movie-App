@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Auth from "../hoc/auth";
 // pages for this product
-import LandingPage from "./views/LandingPage/LandingPage";
-import LoginPage from "./views/LoginPage/LoginPage";
-import RegisterPage from "./views/RegisterPage/RegisterPage";
-import NavBar from "./views/NavBar/NavBar";
-import Footer from "./views/Footer/Footer";
-import MovieDetailsPage from "./views/MovieDetailsPage/MovieDetailsPage";
-import FavouritePage from "./views/FavouritePage/FavouritePage";
+import LandingPage from "./views/LandingPage/LandingPage.jsx";
+import LoginPage from "./views/LoginPage/LoginPage.jsx";
+import RegisterPage from "./views/RegisterPage/RegisterPage.jsx";
+import NavBar from "./views/NavBar/NavBar.jsx";
+import Footer from "./views/Footer/Footer.jsx";
+import MovieDetailsPage from "./views/MovieDetailsPage/MovieDetailsPage.jsx";
+import FavouritePage from "./views/FavouritePage/FavouritePage.jsx";
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
